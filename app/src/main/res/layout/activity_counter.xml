@@ -93,13 +93,13 @@
                     android:id="@+id/team_one_plus"
                     style="@style/ScoreButton"
                     android:contentDescription="@string/plus_btn_desc"
-                    android:src="@drawable/plus" />
+                    android:src="@drawable/plus_button" />
 
                 <ImageButton
                     android:id="@+id/team_one_minus"
                     style="@style/ScoreButton"
                     android:contentDescription="@string/minus_btn_desc"
-                    android:src="@drawable/minus" />
+                    android:src="@drawable/minus_button" />
 
 
             </LinearLayout>
@@ -139,13 +139,13 @@
                     android:id="@+id/team_two_plus"
                     style="@style/ScoreButton"
                     android:contentDescription="@string/plus_btn_desc"
-                    android:src="@drawable/plus" />
+                    android:src="@drawable/plus_button" />
 
                 <ImageButton
                     android:id="@+id/team_two_minus"
                     style="@style/ScoreButton"
                     android:contentDescription="@string/minus_btn_desc"
-                    android:src="@drawable/minus" />
+                    android:src="@drawable/minus_button" />
 
 
             </LinearLayout>
