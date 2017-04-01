@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ScoreKeeper</string>
+    <string name="plus_btn_desc">Plus</string>
+    <string name="minus_btn_desc">Minus</string>
+    <string name="welcome">Welcome to ScoreKeeper</string>
+    <string name="one_player">One Player</string>
+    <string name="two_players">Two Players</string>
+    <string name="team_one">TEAM 1</string>
+    <string name="team_two">TEAM 2</string>
+    <string name="leader">Leader:</string>
+    <string name="nobody_yet">Nobody Yet!</string>
+    <string name="your_score">Your score:</string>
+    <string name="equal">Equal</string>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.googleudacity.andrewcunningham.scorekeeper.MainActivity">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/football"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorFadeDark"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/team_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/leader"
+            style="@style/TitleTextStyle" />
+
+        <TextView
+            android:id="@+id/team_in_lead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            style="@style/SubtitleTextStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/team_one_layout"
+            android:background="@color/colorFadeLight"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team_one_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/team_one"
+                style="@style/CounterTextStyle" />
+
+            <TextView
+                android:id="@+id/team_one_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/CounterTextStyle"
+                tools:text="0" />
+
+            <LinearLayout
+                android:id="@+id/buttons_layout_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/team_one_plus"
+                    style="@style/ScoreButton"
+                    android:contentDescription="@string/plus_btn_desc"
+                    android:src="@drawable/plus" />
+
+                <ImageButton
+                    android:id="@+id/team_one_minus"
+                    style="@style/ScoreButton"
+                    android:contentDescription="@string/minus_btn_desc"
+                    android:src="@drawable/minus" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/team_two_layout"
+            android:layout_weight="1"
+            android:background="@color/colorFadeLight"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/team_two"
+                style="@style/CounterTextStyle" />
+
+            <TextView
+                android:id="@+id/team_two_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/CounterTextStyle"
+                tools:text="0" />
+
+            <LinearLayout
+                android:id="@+id/buttons_layout_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/team_two_plus"
+                    style="@style/ScoreButton"
+                    android:contentDescription="@string/plus_btn_desc"
+                    android:src="@drawable/plus" />
+
+                <ImageButton
+                    android:id="@+id/team_two_minus"
+                    style="@style/ScoreButton"
+                    android:contentDescription="@string/minus_btn_desc"
+                    android:src="@drawable/minus" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
