@@ -51,11 +51,13 @@ public class CounterActivity extends Activity implements View.OnClickListener {
         teamTwoScore = (TextView) findViewById(R.id.team_two_score);
 
         // Buttons
+        Button resetButton = (Button) findViewById(R.id.reset_button);
         ImageButton teamOnePlusBtn = (ImageButton) findViewById(R.id.team_one_plus);
         ImageButton teamOneMinusBtn = (ImageButton) findViewById(R.id.team_one_minus);
         ImageButton teamTwoPlusBtn = (ImageButton) findViewById(R.id.team_two_plus);
         ImageButton teamTwoMinusBtn = (ImageButton) findViewById(R.id.team_two_minus);
 
+        resetButton.setOnClickListener(this);
         teamOnePlusBtn.setOnClickListener(this);
         teamOneMinusBtn.setOnClickListener(this);
         teamTwoPlusBtn.setOnClickListener(this);
@@ -97,6 +99,8 @@ public class CounterActivity extends Activity implements View.OnClickListener {
             alterTeamTwoScore(1);
         } else if (v.getId() == R.id.team_two_minus) {
             alterTeamTwoScore(-1);
+        } else if (v.getId() == R.id.reset_button){
+            resetScores();
         }
 
     }
@@ -133,6 +137,21 @@ public class CounterActivity extends Activity implements View.OnClickListener {
             toDisplay = getString(R.string.team_two);
         }
         teamDesc.setText(toDisplay);
+    }
+
+    private void resetScores(){
+        teamOneScoreCount = 0;
+        teamTwoScoreCount = 0;
+        String teamOneString = String.format(Locale.UK, "%d", teamOneScoreCount);
+        String teamTwoString = String.format(Locale.UK, "%d", teamTwoScoreCount);
+
+        if (counterType == ONE_PLAYER) {
+            teamDesc.setText(teamOneString);
+        } else {
+            teamOneScore.setText(teamOneString);
+            teamTwoScore.setText(teamTwoString);
+            updateWinner();
+        }
     }
 
 
